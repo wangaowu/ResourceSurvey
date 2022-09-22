@@ -32,10 +32,10 @@ android {
 
     signingConfigs {
         release {
-            keyAlias 'wuding1234'
-            keyPassword 'wuding1234'
-            storePassword 'wuding1234'
-            storeFile file('D:/SDK/app.jks')
+            keyAlias 'wanggaowu'
+            keyPassword 'wAngaowu22'
+            storePassword 'wAngaowu22'
+            storeFile file('D:/SDK/keystore.jks')
         }
     }
     buildTypes {

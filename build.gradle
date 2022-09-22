@@ -5,8 +5,8 @@ ext {
     applicationId = "com.bytemiracle.resourcesurvey"
     minSdkVersion = 24
     targetSdkVersion = 29
-    versionCode = 5
-    versionName = "1.0.5.${generateMD()}"
+    versionCode = 6
+    versionName = "2.0.6.${generateMD()}"
     //打包的时候使用什么屏幕方式
     screenOrientation = "landscape" //landscape //portrait
 }
