@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_transparent_white">#50FFFFFF</color>
+
+    <color name="bg_login_status_bar">#2B5ECD</color>
+    <color name="bg_transparent_blue">#E5EFFE</color>
+    <color name="bg_patrol_green">#00FF7F</color>
+
+    <color name="app_common_bg_cyanotic">#0C6689</color>
+    <color name="app_common_dark_cyanotic">#094D67</color>
+    <color name="common_text_dark_cyanotic">#052c3a</color>
+
+    <color name="common_orange">#CD950C</color>
+    <color name="common_dark">@color/app_common_dark_cyanotic</color>
+    <color name="common_pressed_dark">@color/common_text_dark_cyanotic</color>
+    <color name="common_transparent_dark">#90000000</color>
+
+</resources>

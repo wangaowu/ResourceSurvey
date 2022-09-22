@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_common_focus_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dpx_10">
+
+        <TextView
+            style="@style/app_common_bold_2_black"
+            android:layout_marginBottom="@dimen/dpx_5"
+            android:text="当前工程" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/view_none_cur_prj_tips"
+                style="@style/common_text_gray_small_2"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_app_text_radius_5_gray_selector"
+                android:padding="@dimen/dpx_10"
+                android:text="没有正打开的工程"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/cur_project_layout"
+                layout="@layout/item_project_list_layout"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dpx_10">
+
+        <TextView
+            style="@style/app_common_bold_2_black"
+            android:layout_marginBottom="@dimen/dpx_5"
+            android:text="工程列表" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_width_use_weight"
+            android:layout_weight="1"
+            android:background="@drawable/bg_app_text_radius_5_gray_selector"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_import_project"
+            style="@style/app_14sp_white_text_blue_small_button"
+            android:layout_margin="@dimen/dpx_10"
+            android:background="@drawable/bg_cyanotic_selector"
+            android:text="导入工程" />
+
+        <TextView
+            style="@style/common_app_content_text"
+            android:text="备注:仅支持本软件备份的zip工程文件"
+            android:textColor="@color/app_common_content_text_light_gray_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

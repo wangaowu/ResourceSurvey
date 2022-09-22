@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="app_logo_size">@dimen/dpx_70</dimen>
+
+</resources>

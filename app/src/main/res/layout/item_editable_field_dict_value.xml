@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/common_app_content_text"
+        android:text="请输入配置内容: " />
+
+    <EditText
+        android:id="@+id/et_value_content"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dpx_5"
+        android:layout_weight="1"
+        android:hint="字段说明" />
+
+    <include layout="@layout/app_line_1px_width" />
+
+    <EditText
+        android:id="@+id/et_value_key"
+        android:layout_width="@dimen/dpx_75"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_5"
+        android:hint="Key" />
+
+    <ImageButton
+        android:id="@+id/ib_operate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_5"
+        android:layout_marginEnd="@dimen/dpx_5"
+        android:background="@drawable/bg_app_text_radius_5_gray_selector"
+        android:src="@drawable/sharp_add_black_36" />
+</LinearLayout>

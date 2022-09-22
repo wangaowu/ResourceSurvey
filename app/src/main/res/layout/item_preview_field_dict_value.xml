@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dpx_10"
+    android:paddingTop="@dimen/dpx_5"
+    android:paddingEnd="@dimen/dpx_10"
+    android:paddingBottom="@dimen/dpx_5">
+
+    <TextView
+        android:id="@+id/tv_value_content"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dpx_5"
+        android:layout_weight="1"
+        android:hint="字段说明" />
+
+    <include layout="@layout/app_line_1px_width" />
+
+    <TextView
+        android:id="@+id/tv_value_key"
+        android:layout_width="@dimen/dpx_75"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_5" />
+</LinearLayout>

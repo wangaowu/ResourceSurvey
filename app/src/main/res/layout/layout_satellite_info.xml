@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dpx_20"
+    android:paddingRight="@dimen/dpx_20">
+
+    <RelativeLayout
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/flag_usedInFix"
+            style="@style/common_app_content_text"
+            android:text="用于最近定位:" />
+
+        <TextView
+            android:id="@+id/tv_usedInFix"
+            style="@style/common_app_content_text"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_usedInFix"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flag_hasCarrierFrequencyHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_usedInFix"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text="含载波频率:" />
+
+        <TextView
+            android:id="@+id/tv_hasCarrierFrequencyHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_usedInFix"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_hasCarrierFrequencyHz"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flag_carrierFrequencyHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_hasCarrierFrequencyHz"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text="载波频率:" />
+
+        <TextView
+            android:id="@+id/tv_carrierFrequencyHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_hasCarrierFrequencyHz"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_carrierFrequencyHz"
+            android:text="-" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/flag_azimuthDegrees"
+            style="@style/common_app_content_text"
+            android:text="卫星角度:" />
+
+        <TextView
+            android:id="@+id/tv_azimuthDegrees"
+            style="@style/common_app_content_text"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_azimuthDegrees"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flag_hasBasebandCn0DbHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_azimuthDegrees"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text="含基带频率:" />
+
+        <TextView
+            android:id="@+id/tv_hasBasebandCn0DbHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_azimuthDegrees"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_hasBasebandCn0DbHz"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flag_cn0DbHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_hasBasebandCn0DbHz"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text="基带频率:" />
+
+        <TextView
+            android:id="@+id/tv_cn0DbHz"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_hasBasebandCn0DbHz"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_cn0DbHz"
+            android:text="-" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/flag_constellationType"
+            style="@style/common_app_content_text"
+            android:text="卫星类型:" />
+
+        <TextView
+            android:id="@+id/tv_constellationType"
+            style="@style/common_app_content_text"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_constellationType"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flag_hasAlmanacData"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_constellationType"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text="含历书参数:" />
+
+        <TextView
+            android:id="@+id/tv_hasAlmanacData"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_constellationType"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_hasAlmanacData"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/flag_hasEphemerisData"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_hasAlmanacData"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text="含星历参数:" />
+
+        <TextView
+            android:id="@+id/tv_hasEphemerisData"
+            style="@style/common_app_content_text"
+            android:layout_below="@id/flag_hasAlmanacData"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:layout_toRightOf="@id/flag_hasEphemerisData"
+            android:text="-" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/app_14sp_white_text_blue_small_button"
+        android:layout_margin="@dimen/dpx_10"
+        android:layout_marginStart="@dimen/dpx_5"
+        android:background="@drawable/bg_cyanotic_selector"
+        android:text="确认" />
+</LinearLayout>

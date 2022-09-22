@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_common_focus_gray"
+    android:orientation="vertical"
+    android:padding="@dimen/dpx_10">
+
+    <include
+        android:id="@+id/layout_solid_color"
+        layout="@layout/layout_pick_color" />
+
+    <include
+        android:id="@+id/layout_bound_color"
+        layout="@layout/layout_pick_color" />
+
+    <include
+        android:id="@+id/layout_solid_alpha"
+        layout="@layout/layout_pick_spinner" />
+
+    <include
+        android:id="@+id/layout_bound_width"
+        layout="@layout/layout_pick_spinner" />
+
+    <include
+        android:id="@+id/layout_select_solid_color"
+        layout="@layout/layout_pick_color" />
+
+    <include
+        android:id="@+id/layout_select_bound_color"
+        layout="@layout/layout_pick_color" />
+
+    <include
+        android:id="@+id/layout_select_bound_width"
+        layout="@layout/layout_pick_spinner" />
+
+    <include
+        android:id="@+id/layout_select_mark_field"
+        layout="@layout/layout_pick_spinner" />
+
+</LinearLayout>

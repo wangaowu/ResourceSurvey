@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_common_focus_gray"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/dpx_10">
+
+    <include
+        android:id="@+id/layout_config_min_distance"
+        layout="@layout/layout_pick_spinner" />
+
+    <include
+        android:id="@+id/layout_config_min_count"
+        layout="@layout/layout_pick_spinner" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_fix_info"
+        style="@style/common_text_gray_small_2"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/dpx_5"
+        android:gravity="left|center_vertical" />
+
+    <Button
+        android:id="@+id/btn_fix"
+        style="@style/app_16sp_white_text_blue_button"
+        android:layout_width="@dimen/dpx_100"
+        android:layout_marginTop="@dimen/dpx_zero"
+        android:background="@drawable/bg_cyanotic_selector"
+        android:text="执行" />
+
+</LinearLayout>

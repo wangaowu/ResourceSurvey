@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dpx_30">
+
+    <FrameLayout
+        android:id="@+id/fl_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_app_text_radius_5_white_selector"
+        android:padding="@dimen/dpx_15">
+
+        <ImageView
+            android:layout_width="@dimen/dpx_20"
+            android:layout_height="@dimen/dpx_20"
+            android:scaleType="fitXY"
+            android:src="@android:drawable/ic_notification_clear_all" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_close"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dpx_20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/common_app_sub_title_text"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            style="@style/common_app_content_text"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:text=""
+            android:textColor="@color/app_common_content_text_light_gray_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/app_14sp_white_text_blue_small_button"
+            android:background="@drawable/bg_cyanotic_selector"
+            android:text="确认" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/app_blue_text_white_button"
+            android:layout_marginStart="@dimen/dpx_20"
+            android:text="取消"
+            android:textColor="@color/common_dark" />
+    </LinearLayout>
+</RelativeLayout>

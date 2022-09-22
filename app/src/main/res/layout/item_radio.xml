@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dpx_8"
+    android:paddingEnd="@dimen/dpx_20"
+    android:paddingBottom="@dimen/dpx_8"
+    android:weightSum="10">
+    <TextView
+        android:id="@+id/view_star"
+        style="@style/common_app_content_text"
+        android:paddingStart="@dimen/dpx_20"
+        android:text="*"
+        android:textColor="@color/app_common_dark_red" />
+    <TextView
+        android:id="@+id/tv_flag"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_weight="4"
+        android:gravity="left|center_vertical"
+        android:paddingStart="@dimen/dpx_20"
+        android:text="任务来源"
+        android:textColor="@color/app_common_content_text_light_gray_color" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="@dimen/dpx_35"
+        android:layout_weight="6"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dpx_20">
+
+        <RadioButton
+            android:id="@+id/yes"
+            android:layout_width="@dimen/dpx_90"
+            android:layout_height="wrap_content"
+            android:button="@drawable/app_radio_selector"
+            android:text="true"
+            android:textColor="@color/app_common_content_text_dark_333_color" />
+
+        <RadioButton
+            android:id="@+id/no"
+            android:layout_width="@dimen/dpx_90"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpx_20"
+            android:button="@drawable/app_radio_selector"
+            android:text="false"
+            android:textColor="@color/app_common_content_text_dark_333_color" />
+    </RadioGroup>
+</LinearLayout>

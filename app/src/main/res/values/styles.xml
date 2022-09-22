@@ -1,0 +1,49 @@
+<resources>
+
+    <style name="AppTheme.Launch">
+        <item name="xui_config_color_splash_bg">@color/xui_config_color_white</item>
+        <item name="xui_config_app_logo_bottom">@dimen/xui_config_app_logo_bottom</item>
+        <item name="xui_config_company_logo_bottom">@dimen/xui_config_company_logo_bottom</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="phone_14sp_white_text_cyanotic_button" parent="app_14sp_white_text_blue_button">
+        <item name="android:background">@drawable/bg_cyanotic_selector</item>
+        <item name="android:layout_height">@dimen/dpx_45</item>
+        <item name="android:layout_width">@dimen/dpx_200</item>
+        <item name="android:textSize">@dimen/spx_16</item>
+    </style>
+
+    <style name="phone_patrol_right_top_bg_white_text" parent="common_text_gray_small_2">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/dpx_85</item>
+        <item name="android:textSize">@dimen/spx_12</item>
+        <item name="android:textColor">@color/app_common_dark_cyanotic</item>
+        <item name="android:background">@drawable/bg_app_text_radius_5_white</item>
+    </style>
+
+    <style name="phone_patrol_right_top_bg_green_text" parent="phone_patrol_right_top_bg_white_text">
+        <item name="android:background">@drawable/bg_app_text_radius_5_green</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="main_page_left_project_function">
+        <item name="android:layout_width">@dimen/dpx_40</item>
+        <item name="android:layout_height">@dimen/dpx_40</item>
+        <item name="android:layout_marginTop">@dimen/dpx_10</item>
+        <item name="android:background">@drawable/bg_stroke_black_roundrect_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/common_dark</item>
+        <item name="android:textSize">@dimen/dpx_10</item>
+    </style>
+
+    <!-- SwitchButton -->
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingRight">?attr/xui_config_content_spacing_horizontal</item>
+        <item name="android:paddingTop">?attr/xui_config_content_spacing_vertical</item>
+        <item name="android:paddingBottom">?attr/xui_config_content_spacing_vertical</item>
+    </style>
+
+</resources>

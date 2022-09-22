@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+        android:id="@+id/tv_geometry_edit"
+        style="@style/main_page_left_project_function"
+        android:layout_width="@dimen/dpx_40"
+        android:layout_height="@dimen/dpx_40"
+        android:layout_marginTop="@dimen/dpx_zero"
+        android:layout_marginEnd="@dimen/dpx_10"
+        android:drawableTop="@drawable/ic_edit_geometry"
+        android:text="编辑" />
+
+    <LinearLayout
+        android:id="@+id/layout_tools_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_tools_bc"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:background="@drawable/tp_save_enable_true" />
+
+        <ImageView
+            android:id="@+id/iv_tools_sc"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_txsc_enable_false" />
+
+        <ImageView
+            android:id="@+id/iv_tools_xfg"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_fgtx_enable_false" />
+
+        <ImageView
+            android:id="@+id/iv_tools_mfg"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_gd_enable_false" />
+	    
+	<ImageView
+            android:id="@+id/iv_tools_hb"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_hb_enable_false" />
+
+        <ImageView
+            android:id="@+id/iv_tools_add_hole"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_add_hole_enable_true" />
+
+        <ImageView
+            android:id="@+id/iv_tools_delete_hole"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_delete_hole_true" />
+
+        <ImageView
+            android:id="@+id/iv_tools_cx"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_txcx_enable_false" />
+
+        <ImageView
+            android:id="@+id/iv_tools_hf"
+            android:layout_width="@dimen/dpx_40"
+            android:layout_height="@dimen/dpx_40"
+            android:layout_marginStart="@dimen/dpx_2"
+            android:background="@drawable/tp_txhf_enable_false" />
+    </LinearLayout>
+
+</LinearLayout>

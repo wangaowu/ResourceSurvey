@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dpx_10"
+    android:paddingTop="@dimen/dpx_5"
+    android:paddingEnd="@dimen/dpx_10"
+    android:paddingBottom="@dimen/dpx_5"
+    android:weightSum="5">
+
+    <TextView
+        android:id="@+id/tv_field_name"
+        style="@style/app_common_bold_2_black"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="start"
+        android:text="字段名称" />
+
+    <ImageButton
+        android:id="@+id/ib_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:src="@drawable/icon_import_dict" />
+
+    <ImageButton
+        android:id="@+id/ib_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:src="@drawable/icon_apply" />
+
+    <LinearLayout
+        android:id="@+id/dict_group"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dpx_10"
+        android:paddingTop="@dimen/dpx_5"
+        android:paddingEnd="@dimen/dpx_10"
+        android:paddingBottom="@dimen/dpx_5"
+        tools:background="@drawable/rect_dot_line_orange">
+
+        <RadioGroup
+            android:id="@+id/rg_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_type_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="文本类型" />
+
+            <RadioButton
+                android:id="@+id/rb_type_single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:text="单选类型" />
+
+            <RadioButton
+                android:id="@+id/rb_type_multi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:text="多选类型" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_dict_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</LinearLayout>

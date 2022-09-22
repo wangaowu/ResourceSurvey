@@ -1,0 +1,129 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'com.jakewharton.butterknife'
+    id 'org.greenrobot.greendao'
+}
+
+//常量定义互联网
+String NET_HOST = '"http://8.136.105.51"'
+String NET_PORT = '":8090"'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        manifestPlaceholders = [configScreen: rootProject.ext.screenOrientation]
+
+        multiDexEnabled true
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'wuding1234'
+            keyPassword 'wuding1234'
+            storePassword 'wuding1234'
+            storeFile file('D:/SDK/app.jks')
+        }
+    }
+    buildTypes {
+        //release不指定构建环境（默认互联网）
+        release {
+            debuggable false
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+            buildConfigField 'String', 'HOST', NET_HOST
+            buildConfigField 'String', 'PORT', NET_PORT
+        }
+
+        //debug不指定构建环境（默认互联网）
+        debug {
+            debuggable true
+            minifyEnabled false
+            ndk {
+                abiFilters "armeabi-v7a"
+            }
+            buildConfigField 'String', 'HOST', NET_HOST
+            buildConfigField 'String', 'PORT', NET_PORT
+        }
+    }
+
+    /**
+     * 生成包规则，使用闭包
+     */
+    applicationVariants.all {
+        outputs.each { output ->
+            def apkName = "dcc_v${it.versionName}_${it.buildType.name}_${generateTime()}.apk"
+            if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+                output.outputFileName = apkName
+            }
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'classes.dex'
+    }
+    //数据库版本随app版本号,有字段修改，请升级versionCode
+    greendao {
+        schemaVersion rootProject.ext.versionCode
+        daoPackage "${project.applicationId}.cache_greendao"
+        targetGenDir 'src/main/java'
+    }
+}
+
+def generateTime() {
+    return new Date().format("MMdd_HHmm", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    //implementation project(path: ':flutter')
+    api project(':osmdroid')
+
+    implementation 'com.airbnb.android:lottie:5.2.0'
+
+    implementation 'me.rosuh:AndroidFilePicker:0.8.2'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    //腾讯定位
+    implementation 'com.tencent.map.geolocation:TencentLocationSdk-openplatform:7.2.6'
+
+    //分包
+    implementation 'com.android.support:multidex:1.0.3'
+
+    //butterknife 控件注解
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    //kotlin
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha01'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+}
+
+

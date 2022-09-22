@@ -1,0 +1,42 @@
+// 该文件升级后，仅管理插件（非依赖项）、插件来源仓库配置项
+ext {
+    compileSdkVersion = 30
+    buildToolsVersion = '30.0.3'
+    applicationId = "com.bytemiracle.resourcesurvey"
+    minSdkVersion = 24
+    targetSdkVersion = 29
+    versionCode = 5
+    versionName = "1.0.5.${generateMD()}"
+    //打包的时候使用什么屏幕方式
+    screenOrientation = "landscape" //landscape //portrait
+}
+
+def generateMD() {
+    return new Date().format("MMdd", TimeZone.getTimeZone("GMT+08:00"))
+}
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
+
+        //Android ORM Greendao
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+    }
+}
+
+allprojects {
+//    repositories {
+//        flatDir { dirs 'libs', 'libs' }
+//    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

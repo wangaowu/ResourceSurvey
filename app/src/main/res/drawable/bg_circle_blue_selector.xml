@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--应用内的按钮圆角背景-->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <gradient android:angle="45" android:endColor="#00F" android:gradientRadius="@dimen/dpx_90" android:startColor="@color/app_common_dark_cyanotic" android:type="radial" />
+        </shape>
+    </item>
+    <item android:state_window_focused="false">
+        <shape android:shape="oval">
+            <gradient android:angle="45" android:endColor="@color/app_common_dark_cyanotic" android:gradientRadius="@dimen/dpx_90" android:startColor="@color/app_common_dark_cyanotic" android:type="radial" />
+        </shape>
+    </item>
+
+</selector>

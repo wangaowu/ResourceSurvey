@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_speak"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.bytemiracle.base.framework.view.volumeView.VolumeView
+        android:id="@+id/vl_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/btn_function_speak"
+        style="@style/app_circle_image_button_style"
+        android:layout_width="@dimen/dpx_45"
+        android:layout_height="@dimen/dpx_45"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_record_start" />
+
+    <TextView
+        android:id="@+id/tv_function_state"
+        style="@style/common_text_gray_small_2"
+        android:layout_marginBottom="@dimen/dpx_10"
+        android:text="开始录制" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpx_70"
+    android:background="@color/common_transparent_dark"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+        android:id="@+id/proxy_undo"
+        style="@style/main_page_left_project_function"
+        android:layout_marginStart="@dimen/dpx_5"
+        android:layout_marginTop="@dimen/dpx_zero"
+        android:drawableTop="@drawable/ic_paint_backforward"
+        android:text="撤销" />
+
+    <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+        android:id="@+id/proxy_redo"
+        style="@style/main_page_left_project_function"
+        android:layout_marginStart="@dimen/dpx_5"
+        android:layout_marginTop="@dimen/dpx_zero"
+        android:drawableTop="@drawable/ic_paint_forward"
+        android:text="恢复" />
+
+    <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+        android:id="@+id/proxy_complete"
+        style="@style/main_page_left_project_function"
+        android:layout_marginStart="@dimen/dpx_5"
+        android:layout_marginTop="@dimen/dpx_zero"
+        android:drawableTop="@drawable/ic_draw_complete"
+        android:text="完成" />
+</LinearLayout>

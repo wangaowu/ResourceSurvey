@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpx_45"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_field_name"
+            style="@style/common_app_content_text"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_weight="2"
+            android:text="field"
+            android:textStyle="bold" />
+
+        <include layout="@layout/app_line_1px_width" />
+
+        <TextView
+            android:id="@+id/tv_field_value"
+            style="@style/common_app_content_text"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_weight="2"
+            android:text="value" />
+
+    </LinearLayout>
+
+    <include layout="@layout/app_line_1px_height_gray" />
+
+</LinearLayout>

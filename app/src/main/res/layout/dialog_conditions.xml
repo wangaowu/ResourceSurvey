@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dpx_5">
+
+    <EditText
+        android:id="@+id/et_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpx_70"
+        android:background="@drawable/bg_gray_roundrect_stroke"
+        android:gravity="start|top"
+        android:hint="请使用按钮或键盘输入条件"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:padding="@dimen/dpx_5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dpx_5"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:id="@+id/rv_fields"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <include
+            layout="@layout/app_line_1px_width"
+            android:layout_width="@dimen/divider_1px_weight"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dpx_5"
+            android:layout_marginEnd="@dimen/dpx_5" />
+
+        <GridView
+            android:id="@+id/gv_operators"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:horizontalSpacing="@dimen/dpx_10"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="@dimen/dpx_10" />
+
+        <LinearLayout
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_width_use_weight"
+                android:layout_weight="1"
+                android:background="@drawable/bg_app_button_radius_5_red_selector"
+                android:text="删除"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_width_use_weight"
+                android:layout_marginTop="@dimen/dpx_5"
+                android:layout_weight="3"
+                android:background="@drawable/bg_cyanotic_selector"
+                android:text="确认"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

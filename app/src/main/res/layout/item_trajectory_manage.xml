@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpx_30"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cb_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:button="@drawable/app_checkbox_selector" />
+
+    <TextView
+        android:id="@+id/tv_trajectory_index"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/dpx_40"
+        android:layout_marginStart="@dimen/dpx_20"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_trajectory_name"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_marginStart="@dimen/dpx_20"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:text="轨迹线名称" />
+
+    <TextView
+        android:id="@+id/tv_trajectory_number"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/dpx_80"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:text="轨迹点数量" />
+
+    <TextView
+        android:id="@+id/tv_trajectory_length"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/dpx_60"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:text="轨迹长度" />
+</LinearLayout>

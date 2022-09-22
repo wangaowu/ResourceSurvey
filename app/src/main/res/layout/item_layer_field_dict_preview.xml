@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dpx_10"
+    android:paddingTop="@dimen/dpx_5"
+    android:paddingEnd="@dimen/dpx_10"
+    android:paddingBottom="@dimen/dpx_5">
+
+    <LinearLayout
+        android:id="@+id/dict_group"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpx_5"
+        android:paddingEnd="@dimen/dpx_10"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/tv_field_name"
+            style="@style/common_app_content_text"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_weight="1"
+            android:text="字段名称" />
+
+        <include layout="@layout/app_line_1px_width" />
+
+        <TextView
+            android:id="@+id/tv_check_type"
+            style="@style/common_app_content_text"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_input"
+            android:text="文本类型" />
+
+        <include layout="@layout/app_line_1px_width" />
+
+        <LinearLayout
+            android:id="@+id/ll_dict_container"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:layout_weight="3"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ib_import"
+        style="@style/app_12sp_white_text_blue_button"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:background="@drawable/bg_cyanotic_selector"
+        android:text="选择" />
+
+</LinearLayout>

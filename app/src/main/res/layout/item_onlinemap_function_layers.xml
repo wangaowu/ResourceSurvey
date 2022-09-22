@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpx_30"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/common_app_content_text"
+        android:text="可见" />
+
+    <TextView
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:layout_weight="1"
+        android:text="名称" />
+
+    <TextView
+        style="@style/common_app_content_text"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:text="缩放" />
+
+    <TextView
+        style="@style/common_app_content_text"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:text="较偏" />
+
+    <TextView
+        style="@style/common_app_content_text"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:text="移除" />
+
+</LinearLayout>

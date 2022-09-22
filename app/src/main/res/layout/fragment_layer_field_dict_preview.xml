@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dict_path"
+        style="@style/common_app_content_text"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:layout_marginTop="@dimen/dpx_10"
+        android:text="字典配置路径:xx"
+        android:textColor="@color/app_common_content_text_light_gray_color" />
+
+    <TextView
+        android:id="@+id/tv_dict_guide"
+        style="@style/common_app_content_text"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:layout_marginTop="@dimen/dpx_5"
+        android:layout_marginBottom="@dimen/dpx_15"
+        android:text="字典配置路径:xx"
+        android:textColor="@color/app_common_content_text_light_gray_color" />
+
+    <include layout="@layout/app_line_1px_height_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpx_10"
+        android:paddingEnd="@dimen/dpx_10"
+        android:weightSum="5">
+
+        <TextView
+            style="@style/app_common_bold_2_black"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="字段名称" />
+
+        <include layout="@layout/app_line_1px_width" />
+
+        <TextView
+            style="@style/app_common_bold_2_black"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="选择类型" />
+
+        <include layout="@layout/app_line_1px_width" />
+
+        <TextView
+            style="@style/app_common_bold_2_black"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="字典可选项" />
+
+        <Button
+            style="@style/app_12sp_white_text_blue_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dpx_5"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <include layout="@layout/app_line_1px_height_gray" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/layout_none_data"
+            layout="@layout/layout_none_data" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </FrameLayout>
+</LinearLayout>

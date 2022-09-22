@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.osmdroid.defaultImpl">
+
+    <application>
+        <!--缓存瓦片服务-->
+        <service
+            android:name="org.osmdroid.cache.CacheTilesService"
+            android:foregroundServiceType="dataSync" />
+    </application>
+</manifest>

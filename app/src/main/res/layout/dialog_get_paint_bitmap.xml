@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_margin="@dimen/dpx_10"
+        android:layout_weight="1">
+
+        <com.bytemiracle.resourcesurvey.common.view.PaintView
+            android:id="@+id/paint_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/btn_clear"
+            android:layout_width="@dimen/dpx_45"
+            android:layout_height="@dimen/dpx_45"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dpx_10"
+            android:src="@drawable/ic_common_restart"
+            android:text="重画" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dpx_10">
+
+            <ImageView
+                android:id="@+id/iv_color"
+                style="@style/main_page_left_project_function"
+                android:layout_width="@dimen/dpx_70"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:background="@color/black"
+                android:drawableTop="@drawable/ic_paint_pencle" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_pencle"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_10"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_pencle"
+                android:text="铅笔" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_line"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_line"
+                android:text="线条" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_rect"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_rect"
+                android:text="矩形" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_circle"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_circle"
+                android:text="圆形" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_text"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_text"
+                android:text="文字" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_erase"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_erase"
+                android:text="橡皮" />
+
+            <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+                android:id="@+id/proxy_back"
+                style="@style/main_page_left_project_function"
+                android:layout_marginStart="@dimen/dpx_5"
+                android:layout_marginTop="@dimen/dpx_zero"
+                android:drawableTop="@drawable/ic_paint_backforward"
+                android:text="撤销" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_content"
+        android:layout_margin="@dimen/dpx_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/app_14sp_white_text_blue_small_button"
+            android:background="@drawable/bg_cyanotic_selector"
+            android:text="完成" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/app_blue_text_white_button"
+            android:layout_marginStart="@dimen/dpx_70"
+            android:background="@drawable/bg_stroke_black_roundrect_selector"
+            android:text="取消"
+            android:textColor="@color/common_dark" />
+    </LinearLayout>
+</LinearLayout>

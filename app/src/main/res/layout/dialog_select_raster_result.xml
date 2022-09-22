@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/dpx_10">
+
+        <TextView
+            android:id="@+id/tv_raster_name"
+            style="@style/common_app_content_text"
+            android:gravity="left"
+            android:text="文件名:xxxxxxx" />
+
+        <TextView
+            android:id="@+id/tv_raster_path"
+            style="@style/common_app_content_text"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:gravity="left"
+            android:text="文件路径:xxxxxxx" />
+
+        <TextView
+            android:id="@+id/tv_raster_size"
+            style="@style/common_app_content_text"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:gravity="left"
+            android:text="文件大小:xxxxxxx" />
+
+        <TextView
+            android:id="@+id/tv_raster_prj_system"
+            style="@style/common_app_content_text"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:gravity="left"
+            android:text="文件坐标系:xxxxxxx" />
+
+        <TextView
+            android:id="@+id/tv_project_prj_system"
+            style="@style/common_app_content_text"
+            android:layout_marginTop="@dimen/dpx_10"
+            android:gravity="left"
+            android:text="工程坐标系:xxxxxxxx" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/app_14sp_white_text_blue_small_button"
+        android:layout_margin="@dimen/dpx_10"
+        android:background="@drawable/bg_cyanotic_selector"
+        android:text="确认" />
+
+</LinearLayout>

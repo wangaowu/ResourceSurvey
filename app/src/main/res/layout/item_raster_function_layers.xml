@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dpx_70"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_raster_visible"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/dpx_30"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:src="@drawable/ic_visible_layer" />
+
+    <LinearLayout
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpx_20"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_raster_name"
+            style="@style/common_app_content_text"
+            android:layout_width="match_parent"
+            android:gravity="left"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/tv_prj_system"
+            style="@style/common_app_content_text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:gravity="left"
+            android:maxLines="1"
+            android:textColor="@color/app_common_light_gray_2"
+            android:textSize="@dimen/spx_12" />
+
+        <TextView
+            android:id="@+id/tv_locate_dir"
+            style="@style/common_app_content_text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dpx_5"
+            android:gravity="left"
+            android:maxLines="1"
+            android:textColor="@color/app_common_light_gray_2"
+            android:textSize="@dimen/spx_12" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_raster_over_see"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/dpx_30"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:src="@drawable/ic_can_oversee" />
+
+    <ImageView
+        android:id="@+id/iv_raster_delete"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/dpx_30"
+        android:layout_marginStart="@dimen/dpx_10"
+        android:src="@drawable/ic_delete_layer" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpx_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/dpx_10">
+
+        <ImageView
+            android:id="@+id/iv_editable_flag"
+            android:layout_width="@dimen/dpx_30"
+            android:layout_height="@dimen/dpx_30"
+            android:src="@drawable/ic_no_edit_layer" />
+
+        <TextView
+            style="@style/common_app_content_text"
+            android:gravity="left"
+            android:paddingStart="@dimen/dpx_30"
+            android:paddingEnd="@dimen/dpx_10"
+            android:text="图层名称:" />
+
+        <TextView
+            android:id="@+id/tv_layer_name"
+            style="@style/common_app_content_text"
+            android:layout_width="@dimen/default_width_use_weight"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_marginStart="@dimen/dpx_10"
+            style="@style/common_app_content_text"
+            android:text="图层类型:" />
+
+        <ImageView
+            android:id="@+id/iv_layer_type"
+            android:layout_width="@dimen/dpx_30"
+            android:layout_height="@dimen/dpx_30"
+            android:layout_marginStart="@dimen/dpx_5" />
+    </LinearLayout>
+
+    <include layout="@layout/app_line_1px_height_gray" />
+
+</LinearLayout>

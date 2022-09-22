@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_width_use_weight"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/dpx_10">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="在此输入" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_content"
+        android:layout_marginStart="@dimen/dpx_20"
+        android:layout_marginEnd="@dimen/dpx_20"
+        android:layout_marginBottom="@dimen/dpx_20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/app_14sp_white_text_blue_small_button"
+            android:background="@drawable/bg_cyanotic_selector"
+            android:text="完成" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/app_blue_text_white_button"
+            android:layout_marginStart="@dimen/dpx_70"
+            android:background="@drawable/bg_stroke_black_roundrect_selector"
+            android:text="取消"
+            android:textColor="@color/common_dark" />
+    </LinearLayout>
+</LinearLayout>

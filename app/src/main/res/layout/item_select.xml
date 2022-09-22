@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/dpx_8"
+    android:paddingEnd="@dimen/dpx_20"
+    android:paddingBottom="@dimen/dpx_8">
+
+    <TextView
+        android:id="@+id/tv_flag"
+        style="@style/common_app_content_text"
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_weight="4"
+        android:gravity="left|center_vertical"
+        android:paddingStart="@dimen/dpx_20"
+        android:text="任务来源"
+        android:textColor="@color/app_common_content_text_light_gray_color" />
+
+    <LinearLayout
+        android:layout_width="@dimen/default_width_use_weight"
+        android:layout_height="wrap_content"
+        android:layout_weight="6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dpx_20">
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/common_app_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:gravity="left|center_vertical"
+            android:minWidth="@dimen/dpx_80"
+            android:minHeight="@dimen/dpx_35"
+            android:paddingStart="@dimen/dpx_10" />
+    </LinearLayout>
+
+</LinearLayout>

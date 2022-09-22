@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/xui_transparent">
+
+    <View
+        android:layout_width="@dimen/dpx_5"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/dpx_50"
+        android:background="@color/common_orange" />
+
+    <View
+        android:layout_width="@dimen/dpx_5"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/dpx_50"
+        android:background="@color/common_orange" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpx_5"
+        android:layout_marginTop="@dimen/dpx_50"
+        android:background="@color/common_orange" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dpx_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_orange"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/common_text_gray_small_2"
+            android:text="请用橙色框选地图范围"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_download"
+            style="@style/app_14sp_white_text_blue_small_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dpx_50"
+            android:text="缓存瓦片" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/app_blue_text_white_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dpx_10"
+            android:gravity="center"
+            android:text="取消" />
+
+    </LinearLayout>
+</RelativeLayout>

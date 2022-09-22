@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--叠加的效果  两个shape的叠加 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+
+            <size
+                android:width="@dimen/dpx_15"
+                android:height="@dimen/dpx_15" />
+
+            <solid android:color="#ddd" />
+
+            <stroke
+                android:width="1.5dp"
+                android:color="#F00" />
+
+        </shape>
+    </item>
+
+    <item
+        android:bottom="6.5dp"
+        android:end="3dp"
+        android:start="3dp"
+        android:top="6.5dp">
+        <shape
+            android:dither="true"
+            android:shape="rectangle">
+            <solid android:color="#F00" />
+        </shape>
+    </item>
+
+
+</layer-list>

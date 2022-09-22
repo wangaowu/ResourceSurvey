@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dpx_10">
+
+    <LinearLayout
+        android:id="@+id/layout_left"
+        android:layout_width="@dimen/dpx_40"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_geometry_tools"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/dpx_10"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_layers"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/screen_control"
+            android:text="图层" />
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_editable_layers"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/ic_can_editable_layer"
+            android:text="编辑" />
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_identify"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/ic_identify_feature"
+            android:text="识别" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_right"
+        android:layout_width="@dimen/dpx_40"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_trajectory"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/tp_trail_enable_true"
+            android:text="轨迹"
+            android:visibility="gone" />
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_measure_area"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/ic_measure_area"
+            android:text="面积" />
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_measure_distance"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/ic_measure_distance"
+            android:text="距离" />
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_full_screen"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/tp_qt_enable_true"
+            android:text="全图" />
+
+        <com.bytemiracle.resourcesurvey.common.basecompunent.TViewProxy
+            android:id="@+id/view_my_location"
+            style="@style/main_page_left_project_function"
+            android:drawableTop="@drawable/tp_dw_enable_false"
+            android:text="定位" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/layout_geometry_tools"
+        layout="@layout/layout_geometry_tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/layout_right" />
+
+</RelativeLayout>

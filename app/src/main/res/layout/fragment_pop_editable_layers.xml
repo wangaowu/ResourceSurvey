@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_common_focus_gray"
+    android:padding="@dimen/dpx_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_app_text_radius_5_gray_selector"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/common_text_gray_small_2"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="提示：编辑图层会隐藏其他所有图层"
+            android:textColor="@color/app_common_light_gray_2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_layers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+
+
+</FrameLayout>

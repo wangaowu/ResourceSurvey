@@ -1,0 +1,27 @@
+// 该文件升级后，配置之前的依赖来源 repository项
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+
+        //localMaven
+        maven { url 'file:/D:/localMaven/repository' }
+        flatDir {
+            dirs './app/libs'
+        }
+    }
+}
+rootProject.name = "resourcesurvey"
+
+include ':app', ':osmdroid'//, ':androidjts'
+//setBinding(new Binding([gradle: this]))
+//evaluate(new File(
+//  settingsDir,
+//  '../flutter_module/.android/include_flutter.groovy'
+//))
+//
+//include ':flutter_module'
+//project(':flutter_module').projectDir = new File('../flutter_module')
