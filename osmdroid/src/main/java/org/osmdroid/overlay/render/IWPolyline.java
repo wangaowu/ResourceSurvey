@@ -17,6 +17,13 @@ import java.util.List;
  * @date 2022/2/24 17:20
  */
 public class IWPolyline extends Polyline implements ISelectOverlay<PolylineOptions> {
+    private static final int TOLERANCE = 12;
+
+    public IWPolyline() {
+        super();
+        //设置此数值，可以在点击回调的时候，扩大容差
+        setDensityMultiplier(TOLERANCE);
+    }
 
     /**
      * 绑定对象

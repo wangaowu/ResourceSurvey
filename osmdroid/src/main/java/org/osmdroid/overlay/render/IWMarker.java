@@ -1,6 +1,9 @@
 package org.osmdroid.overlay.render;
 
 import android.graphics.Canvas;
+import android.graphics.Rect;
+import android.graphics.RectF;
+import android.view.MotionEvent;
 
 import org.jetbrains.annotations.NotNull;
 import org.osmdroid.overlay.bean.FeatureOverlayInfo;
@@ -9,8 +12,10 @@ import org.osmdroid.views.MapView;
 import org.osmdroid.views.Projection;
 import org.osmdroid.views.overlay.Marker;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 类功能：可聚焦的marker
@@ -19,6 +24,30 @@ import java.util.List;
  * @date 2022/2/24 17:21
  */
 public class IWMarker extends Marker implements ISelectOverlay<MarkerOptions> {
+    private static final int TOLERANCE = 12;
+
+    /**
+     * 为了实现点的点击容差，重写此方法
+     *
+     * @param event
+     * @param mapView
+     * @return
+     */
+    @Override
+    public boolean hitTest(final MotionEvent event, final MapView mapView) {
+        try {
+            boolean displayed = (boolean) getSuperField("mDisplayed");
+            Rect orientedMarkerRect = (Rect) getSuperField("mOrientedMarkerRect");
+
+            //拷贝矩形，并向外扩充容差范围
+            RectF rectF = new RectF(orientedMarkerRect);
+            rectF.inset(-TOLERANCE, -TOLERANCE);
+
+            return mIcon != null && displayed && rectF.contains((int) event.getX(), (int) event.getY());
+        } catch (Exception e) {
+            return super.hitTest(event, mapView);
+        }
+    }
 
     /**
      * 绑定对象
@@ -86,5 +115,12 @@ public class IWMarker extends Marker implements ISelectOverlay<MarkerOptions> {
         if (selectOptions != null) {
             setIcon(selected ? selectOptions.getSelectedIcon() : selectOptions.getIcon());
         }
+    }
+
+    //简单一个获取父类private value的工具方法
+    private Object getSuperField(String paramString) throws Exception {
+        Field field = Objects.requireNonNull(IWMarker.class.getSuperclass()).getDeclaredField(paramString);
+        field.setAccessible(true);
+        return field.get(this);
     }
 }
