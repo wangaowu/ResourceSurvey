@@ -24,7 +24,7 @@ dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
     //依赖base
-    api 'com.bytemiracle.base:smart-base:1.0.951'
+    api 'com.bytemiracle.base:smart-base-cyanotic:3.0.1'
 
     //xstream解析
     api('com.thoughtworks.xstream:xstream:1.4.11.1') {

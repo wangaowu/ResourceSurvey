@@ -102,7 +102,7 @@ public class ConditionsDialog extends BaseDialogFragment {
                         TextView tvContent = holder.itemView.findViewById(R.id.tv_content);
                         tvContent.setBackground(null);
                         tvContent.getPaint().setUnderlineText(true);
-                        tvContent.setTextColor(getResources().getColor(R.color.app_common_text_blue));
+                        tvContent.setTextColor(getResources().getColor(R.color.app_common_dark_cyanotic));
                         tvContent.setText(columnName);
 
                         holder.itemView.setOnClickListener(v -> clickItemListener.doSomething(columnName));

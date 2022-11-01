@@ -8,7 +8,7 @@ ext {
     versionCode = 6
     versionName = "2.0.6.${generateMD()}"
     //打包的时候使用什么屏幕方式
-    screenOrientation = "landscape" //landscape //portrait
+    screenOrientation = "portrait" //landscape //portrait
 }
 
 def generateMD() {
@@ -23,7 +23,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.3'
         classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
 
         //Android ORM Greendao
         classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
